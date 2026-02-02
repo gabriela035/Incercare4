@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Geometric Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="controls">
+            <h1>Geometric Garden</h1>
+            
+            <div class="control-group">
+                <label for="shapeSelect">Shape Type:</label>
+                <select id="shapeSelect">
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="triangle">Triangle</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="colorSelect">Color:</label>
+                <input type="color" id="colorSelect" value="#4CAF50">
+            </div>
+
+            <button id="addBtn">Plant Shape</button>
+            <button id="clearBtn" class="outline">Clear Garden</button>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gardenCanvas"></canvas>
+            
+            <div id="legend">
+                <h3>Garden Stats</h3>
+                <p><strong>Mouse X:</strong> <span id="mouseX">0</span></p>
+                <p><strong>Mouse Y:</strong> <span id="mouseY">0</span></p>
+                <p><strong>Total Plants:</strong> <span id="count">0</span></p>
+                <p><strong>Status:</strong> <span id="status">Idle</span></p>
+                <p class="hint"><em>(Drag shapes to move)</em></p>
+            </div>
+        </div>
+    </div>
+
+  
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
